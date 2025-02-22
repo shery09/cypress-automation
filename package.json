@@ -1,0 +1,30 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headedMode": "npx cypress run --headed",
+    "recordDashboardTest": "npx cypress run --record --key 29dd47eb-7ede-4a4d-85f3-142f83a9e9d9",
+    "chromeTest": "npx run test --browser chrome",
+    "smokeTest": "npx cypress run --spec \"cypress/integration/examples/Test1.js\""
+  },
+  "cypress-cucumber-preprocessorrc.json": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucmberReports/results.json"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.0.2",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@cypress/browserify-preprocessor": "latest"
+  }
+}
